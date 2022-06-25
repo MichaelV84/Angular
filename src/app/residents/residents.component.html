@@ -1,0 +1,25 @@
+<div class="myBody">
+    <div class="picture">
+        <div class="pic1">
+            <div class="row row-cols-1 row-cols-md-5 g-4" >
+                <div *ngFor="let resident of residents">
+                    <div class="col">
+                        <div class="card">
+                            <img src="{{resident.Picture}}" class="card-img-top" alt="photo"  >
+                            <div class="card-body" style=" color: #1c5581; text-shadow: 0px 0px 1px rgb(0, 0, 0);;background-color:#dfe7ee ">
+                                <h5 class="card-title">{{resident.PName}}</h5>
+                                <p class="card-text">Age : {{resident.Age}}</p>
+                                <p class="card-text">Sex : {{resident.Sex == true ? "Male" : "Female"}}</p>
+                                <p class="card-text">City : {{resident.City}}</p>
+                                <p class="card-text">Address : {{resident.Address}}</p>
+                                <p class="card-text">Living during {{getResidentStartDate(resident.StartDate)}} years</p>
+                                <p class="card-text">Status : {{getResidentStatus(resident.Status)}}</p>
+                                <a [routerLink]="['/residents', resident.Id]"  class="btn btn-primary" style="background-color: #1c5581; color: #dfe7ee;" >Edit</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

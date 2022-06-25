@@ -1,0 +1,27 @@
+.myBody{
+    text-align: center;
+ 
+    background-color:#dfe7ee;
+    margin-top:40px ;
+    
+}
+.card1{
+    display: inline-block;
+    margin : 5px;
+    
+}
+.picture{
+    min-height: 100%;
+    width: 100%;
+    background: url("https://www.myjewishlearning.com/wp-content/uploads/2006/06/iStock-175425327-945x630.jpg") no-repeat ;
+    background-size: 100%;
+    background-attachment:fixed;
+   
+   
+}
+.pic1{
+    margin-left: 2%;
+    margin-right: 2%;
+    padding-bottom: 1%;
+   
+}

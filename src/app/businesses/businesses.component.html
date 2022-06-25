@@ -1,0 +1,23 @@
+
+<div class="myBody">
+    <table class="table table-hover" >   
+        <thead>
+            <tr>
+              <th scope="col">Number of Busssiness</th>
+              <th scope="col">סוג עבודה</th>
+              <th scope="col">NumOfWorkers</th>
+              <th scope="col">Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let bussiness of bussinesses"
+            [ngStyle]="{'background-color': changeBussinessColor(bussiness.Salary) , 'color':changeTextColor(changeBussinessColor(bussiness.Salary))}"
+            > 
+                <td>{{bussiness.BussinessNum}}</td>
+                <td>{{bussiness.NameOfWork}}</td>
+                <td>{{bussiness.NameOfWork}}</td> 
+                <td>{{bussiness.Salary}}</td>
+            </tr>
+        </tbody>
+    </table>   
+</div>

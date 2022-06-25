@@ -1,0 +1,58 @@
+<div class="myBody">
+  <div *ngIf="resident | async as resident" style="margin-left: 1%; margin-right: 1%;">
+    <h6 class="hello">Hello dear <span class="hello2">{{resident.PName}}</span> ! Here you can change your information </h6>
+    <p style="margin-left: 20px;text-align: left;font-weight: 600;font-size: 22px;">ID : {{resident.Id}}</p>
+        <div class="row g-3">
+            <div class="col-md">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="floatingInputGrid1" [(ngModel)]="resident.PName" style="padding-left: 15px;margin-top: 10px; margin-bottom: 10px;" >
+                <label for="floatingInputGrid1" style="padding-left: 15px;">Full Name</label>
+              </div>
+            </div>
+            <div class="col-md">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="floatingInputGrid2" [(ngModel)]="resident.Age" style="padding-left: 15px; margin-top: 10px;margin-bottom: 10px;" >
+                  <label for="floatingInputGrid2" style="padding-left: 15px;" >Age</label>
+                </div>
+            </div>
+            <div class="col-md">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="floatingInputGrid4" [(ngModel)]="resident.City" style="padding-left: 15px;margin-top: 10px; margin-bottom: 10px;" >
+                <label for="floatingInputGrid4" style="padding-left: 15px;">City</label>
+              </div>
+            </div>
+          </div>
+            <div class="row g-3">
+            <div class="col-md">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="floatingInputGrid5" [(ngModel)]="resident.Address" style="padding-left: 15px; margin-top: 10px;margin-bottom: 10px;" >
+                <label for="floatingInputGrid5" style="padding-left: 15px;" >Address</label>
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="form-floating" >
+                <select class="form-select" id="floatingSelectGrid3" style="padding-left: 15px; margin-top: 10px;margin-bottom: 10px;" >
+                  <option selected >{{getResidentSex(resident.Sex)}} </option>
+                  <option  value="true">Male</option>
+                  <option  value="false">Female</option>
+                </select>
+                <label for="floatingSelectGrid3">Change your sex</label>
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="form-floating" >
+                <select class="form-select" id="floatingSelectGrid6" style="padding-left: 15px; margin-top: 10px;margin-bottom: 10px;" >
+                  <option selected >{{getResidentStatus(resident.Status)}}</option>
+                  <option  value="A">Single</option>
+                  <option  value="B">Married</option>
+                  <option  value="C">Divorced</option>
+                  <option  value="D">Widow(er)</option>
+                </select>
+                <label for="floatingSelectGrid6">Change your status</label>
+              </div>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-primary" (click)="goBack()" style="margin-bottom: 20px;background-color:#1c5581">Save</button>
+</div>
+

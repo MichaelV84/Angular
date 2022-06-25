@@ -1,0 +1,27 @@
+<div class="myBody">   
+    <table class="table table-hover" >   
+        <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Event Number</th>
+              <th scope="col">How many people</th>
+              <th scope="col">Address</th>
+              <th scope="col">Director</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let event of events" 
+            [ngStyle]="{'background-color': changeEventColor(event.Pnumber) ,'color':changeTextColor(changeEventColor(event.Pnumber))}"
+            > 
+                <td style="height: 50px;">{{event.Ename}}</td>
+                <td>{{event.EventNum}}</td>
+                <td>{{event.Pnumber}}</td>
+                <td>{{event.EventAddress}}</td>
+                <td>{{event.Menael.PName}}</td>
+                <button [routerLink]="['/events', event.EventNum]"  class="btn btn-primary" style="background-color: #1c5581; color: #dfe7ee;" >Edit</button>
+            </tr>
+        </tbody>
+    </table>   
+</div>
+
+

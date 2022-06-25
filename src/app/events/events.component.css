@@ -1,0 +1,13 @@
+.myBody{
+    text-align: center;
+    
+    background-color:#dfe7ee;
+}
+td{
+    font-weight: 500;
+   
+}
+tr{
+    justify-content: center;
+    vertical-align: middle;
+}

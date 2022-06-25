@@ -1,0 +1,11 @@
+<div class="myBody">
+  <p>lsklsk</p>
+    <div *ngIf="event | async as event" style="margin-left: 1%; margin-right: 1%;">
+    <h6 >Hello dear {{event.Ename}} Here you can change your information </h6>
+    <p >ID : {{event.Ename}}</p>
+      <!-- <input type="text" class="form-control" id="floatingInputGrid1" [(ngModel)]="event.Ename" style="padding-left: 15px;margin-top: 10px; margin-bottom: 10px;" >
+      <label for="floatingInputGrid1" style="padding-left: 15px;">Full Name</label> -->
+    </div>
+  <button class="btn btn-primary" (click)="goBack()" style="margin-bottom: 20px;background-color:#1c5581">Save</button>
+</div>
+

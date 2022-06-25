@@ -1,0 +1,55 @@
+.myBody{
+    text-align: center;
+ 
+    background-color:#dfe7ee;
+    margin-top:20px ;
+    
+}
+
+.picture{
+    min-height: 100%;
+    width: 100%;
+    background: url("https://cdn-didgo.nitrocdn.com/sWaJzfWBTqoMmVxMYeEbTVsCUGLbXTpq/assets/static/optimized/rev-a0d379e/wp-content/uploads/2020/01/%D7%99%D7%A8%D7%95%D7%A9%D7%9C%D7%99%D7%9D-%D7%A9%D7%9C-%D7%96%D7%94%D7%91-3.jpg") no-repeat ;
+    background-size: 100%;
+    background-attachment:fixed;
+   
+   
+}
+.pic1{
+    margin-left: 2%;
+    margin-right: 2%;
+    padding-bottom: 1%;
+    background-color:#dfe7ee;
+    background: rgb(223, 231, 238 , 0.7); 
+}
+.forText{
+    margin-top: 25px;
+   margin-left: 5%;
+   margin-right: 5%;
+   padding-top: 40px;
+   font-weight: 600;
+   color: #1c5581;
+   text-shadow: 1px 1px 0px #000000;
+   
+}
+.koteret{
+    height: 20px;
+    justify-content: center;
+    background-color: "red";
+    border: 2px solid "black";
+    color: #1c5581;
+    height: 25px;
+}
+.blockText{
+    margin-top: 40px;
+}
+.bigP{
+    text-align: right;
+    margin-right: 2%;
+    padding-top: 1%;
+    font-size: 25px;
+    font-weight: 600;
+    color: #1c5581;
+    text-shadow: 1px 1px 0px #000000;
+  
+}

@@ -1,0 +1,26 @@
+
+<div class="myBody">
+    <table class="table table-hover" >   
+        <thead>
+            <tr>
+              <th scope="col">WorkerName</th>
+              <th scope="col">Kind of work</th>
+              <th scope="col">Hours/Mounth</th>
+              <th scope="col">Salary/Hour</th>
+              <th scope="col">Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of employees"
+            [ngStyle]="{'background-color': changeEmployerColor(employee.NumHoursPerMounth , employee.SalaryPerHour) ,'color':changeTextColor(changeEmployerColor(employee.NumHoursPerMounth , employee.SalaryPerHour))}"
+            > 
+                <td>{{employee.PName}}</td>
+                <td>{{employee.WorkName}}</td>
+                <td>{{employee.NumHoursPerMounth}}</td>
+                <td>{{employee.SalaryPerHour}}</td>
+                <td>{{employee.NumHoursPerMounth*employee.SalaryPerHour}}</td>
+                <!-- <a [routerLink]="['/employees', employee.Id]"  class="btn btn-primary" style="background-color: #1c5581; color: #dfe7ee;" >Edit</a> -->
+            </tr>
+        </tbody> 
+    </table>   
+</div>
