@@ -16,7 +16,7 @@ export class EmployeeService {
 
   getEmployee(id:string | number) :Observable<Employee>{
     return this.getEmployees().pipe(
-      map((employees:Employee[]) => employees.find((e) => e.Id===id))
+      map((employees:Employee[]) => employees.find((e) => e.Id==id))
     )
   }
   

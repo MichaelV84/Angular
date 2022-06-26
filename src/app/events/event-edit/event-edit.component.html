@@ -1,10 +1,60 @@
 <div class="myBody">
-  <p>lsklsk</p>
+ 
     <div *ngIf="event | async as event" style="margin-left: 1%; margin-right: 1%;">
-    <h6 >Hello dear {{event.Ename}} Here you can change your information </h6>
-    <p >ID : {{event.Ename}}</p>
-      <!-- <input type="text" class="form-control" id="floatingInputGrid1" [(ngModel)]="event.Ename" style="padding-left: 15px;margin-top: 10px; margin-bottom: 10px;" >
-      <label for="floatingInputGrid1" style="padding-left: 15px;">Full Name</label> -->
+      <h6 class="hello">Here you can change event detales for : <span class="hello2">{{event.Ename}}</span> </h6>
+      <p style="margin-left: 20px;text-align: left;font-weight: 600;font-size: 22px;">Event number : {{event.EventNum}}</p>
+          <div class="row g-2">
+              <div class="col-md">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="floatingInputGrid1" [(ngModel)]="event.Ename" style="padding-left: 15px;margin-top: 10px; margin-bottom: 10px;" >
+                  <label for="floatingInputGrid1" style="padding-left: 15px;">Event Name</label>
+                </div>
+              </div>
+              <div class="col-md">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="floatingInputGrid2" [(ngModel)]="event.EventAddress" style="padding-left: 15px; margin-top: 10px;margin-bottom: 10px;" >
+                    <label for="floatingInputGrid2" style="padding-left: 15px;" >Address</label>
+                  </div>
+              </div>
+          </div> 
+          <div class="row g-2">
+            <div class="col-md">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="floatingInputGrid4" [(ngModel)]="event.Pnumber" style="padding-left: 15px;margin-top: 10px; margin-bottom: 10px;" >
+                <label for="floatingInputGrid4" style="padding-left: 15px;">How many people</label>
+              </div>
+            </div>
+            <div class="col-md">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="floatingInputGrid2" [(ngModel)]="event.Menael.PName" style="padding-left: 15px; margin-top: 10px;margin-bottom: 10px;" >
+                  <label for="floatingInputGrid2" style="padding-left: 15px;" >Director</label>
+                </div>
+            </div>
+        </div> 
+        <div class="row g-3">
+          <div class="col-md">
+            <div class="form-floating">
+              <input type="text" class="form-control" id="floatingInputGrid4" [(ngModel)]="event.Menael.Age" style="padding-left: 15px;margin-top: 10px; margin-bottom: 10px;" >
+              <label for="floatingInputGrid4" style="padding-left: 15px;">How many people</label>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="form-floating" >
+              <select class="form-select" id="floatingSelectGrid3" style="padding-left: 15px; margin-top: 10px;margin-bottom: 10px;" >
+                <option selected >{{getEventDirectorSex(event.Menael.Sex)}} </option>
+                <option  value="true">Male</option>
+                <option  value="false">Female</option>
+              </select>
+              <label for="floatingSelectGrid3">Change your sex</label>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="form-floating">
+              <input type="text" class="form-control" id="floatingInputGrid4" [(ngModel)]="event.Menael.City" style="padding-left: 15px;margin-top: 10px; margin-bottom: 10px;" >
+              <label for="floatingInputGrid4" style="padding-left: 15px;">City</label>
+            </div>
+          </div>
+      </div> 
     </div>
   <button class="btn btn-primary" (click)="goBack()" style="margin-bottom: 20px;background-color:#1c5581">Save</button>
 </div>

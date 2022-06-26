@@ -20,7 +20,17 @@ export class EventEditComponent implements OnInit {
       switchMap((params: ParamMap) => this.service.getEvent(params.get('eventNum')))
     );
   }
- 
+
+  getEventDirectorSex(sex:boolean):string{
+    let k:string;
+    if(sex == true){
+      k = "Male"
+    }
+    if(sex == false){
+      k = "Female"
+    }
+    return k;
+  }
   goBack() {
     this.router.navigate(['/events']);
   }

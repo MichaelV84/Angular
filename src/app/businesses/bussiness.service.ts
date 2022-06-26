@@ -15,7 +15,7 @@ export class BussinessService {
   }
   getBussiness(bussinessNum: string|number){
     return this.getBussinesses().pipe(
-      map((bussinesses : Bussiness[]) =>bussinesses.find((b) => b.BussinessNum===bussinessNum))
+      map((bussinesses : Bussiness[]) =>bussinesses.find((b) => b.BussinessNum==bussinessNum))
     )
   }
 

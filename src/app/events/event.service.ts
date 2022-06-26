@@ -16,7 +16,7 @@ export class EventService {
 
   getEvent(eventNum:number | string){
     return this.getEvents().pipe(
-      map((events:Event[]) => events.find((e) => e.EventNum === eventNum))
+      map((events:Event[]) => events.find((e) => e.EventNum == eventNum))
     )
   }
 }
